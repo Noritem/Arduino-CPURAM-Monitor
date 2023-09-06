@@ -31,17 +31,17 @@ Before you begin, make sure you have the following:
    - Clone this repository to your local machine:
 
      ```bash
-     git clone https://github.com/yourusername/Arduino-CPURAM-Monitor.git
+     git clone https://github.com/Noritem/Arduino-CPURAM-Monitor.git
      cd Arduino-CPURAM-Monitor
      ```
 
 4. **Usage**:
 
-   - Upload the Arduino sketch `arduino_monitor.ino` to your Arduino board using the Arduino IDE.
-   - Run the Python script `python_monitor.py` to start monitoring CPU and RAM usage on your computer:
+   - Upload the Arduino sketch `main.ino` to your Arduino board using the Arduino IDE.
+   - Run the Python script `main.py` to start monitoring CPU and RAM usage on your computer:
 
      ```bash
-     python python_monitor.py
+     python main.py
      ```
 
    - The Arduino will display real-time CPU and RAM usage on the connected OLED screen.
