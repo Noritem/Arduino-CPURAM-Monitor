@@ -1,65 +1,66 @@
-# :computer: CPU & RAM Usage Monitor :chart_with_upwards_trend:
+# Arduino CPU and RAM Monitor 📊
 
-Monitor your computer's CPU and RAM usage using an Arduino and Python. This project displays real-time CPU and RAM usage on an OLED display connected to the Arduino.
+Monitor your computer's CPU and RAM usage using Arduino and Python, displaying real-time statistics on an OLED screen. This project demonstrates how to visualize CPU and RAM usage on an OLED display connected to an Arduino board via a USB cable.
 
-## :gear: Hardware Setup
+## Prerequisites 📋
 
-1. **Connect the OLED Display**:
-   - Connect an OLED display to your Arduino.
-   - Ensure the power, ground, SDA, and SCL pins are correctly connected.
+Before you begin, make sure you have the following:
 
-## :arrow_forward: Arduino Setup
+- [Arduino IDE](https://www.arduino.cc/en/software) installed on your computer.
+- An Arduino board (e.g., Arduino Uno).
+- An OLED display compatible with the Adafruit_SSD1306 library.
+- A USB cable to connect your Arduino board to your computer.
 
-1. **Arduino IDE**:
-   - Open the Arduino IDE.
-   - Copy and paste the Arduino code (`main.ino`) into a new sketch.
+## Getting Started 🚀
 
-2. **Board and Port**:
-   - Select the correct board and COM port in the Arduino IDE.
+1. **Arduino Setup**:
 
-3. **Upload Code**:
-   - Upload the code to your Arduino board.
+   - Connect the OLED display to your Arduino board as per the wiring instructions in your display's datasheet.
+   - Import the `Adafruit_SSD1306` library using the Arduino IDE's Library Manager.
 
-## :hammer_and_wrench: Python Setup
+2. **Python Setup**:
 
-1. **Python**:
-   - Ensure you have Python installed on your computer.
+   - Install the necessary Python packages using pip:
 
-2. **Install Dependencies**:
-   - Install the `psutil and pyserial` library using pip:
-     ```shell
-     pip install psutil
-     pip install pyserial
+     ```bash
+     pip install psutil pyserial
      ```
 
-## :rocket: Running the Programs
+3. **Repository Setup**:
 
-1. **Python Program**:
-   - Open a terminal or command prompt.
+   - Clone this repository to your local machine:
 
-2. **Navigate**:
-   - Navigate to the directory where the Python code (`main.py`) is located.
-
-3. **Run Python Program**:
-   - Run the Python program:
-     ```shell
-     python main.py
+     ```bash
+     git clone https://github.com/yourusername/Arduino-CPURAM-Monitor.git
+     cd Arduino-CPURAM-Monitor
      ```
 
-## :chart_with_upwards_trend: Monitoring CPU and RAM Usage
+4. **Usage**:
 
-- The Python program continuously monitors CPU and RAM usage and sends this data to the Arduino.
+   - Upload the Arduino sketch `arduino_monitor.ino` to your Arduino board using the Arduino IDE.
+   - Run the Python script `python_monitor.py` to start monitoring CPU and RAM usage on your computer:
 
-- The Arduino program displays this information on the OLED display.
+     ```bash
+     python python_monitor.py
+     ```
 
-- If the Python program is not running, the Arduino display will show "Serial module not available."
+   - The Arduino will display real-time CPU and RAM usage on the connected OLED screen.
 
-## :information_source: Interpreting the Display
+5. **Optional**: Customize the code to match your specific hardware and preferences.
 
-- The OLED display shows the CPU and RAM usage as a percentage with 2 decimal places.
+## Troubleshooting 🛠️
 
-## :wrench: Additional Customization
+- If you encounter issues with the Arduino, make sure the board is properly connected and the COM port is set correctly in the Arduino IDE.
+- If the OLED display does not work, verify the wiring and ensure the `Adafruit_SSD1306` library is correctly installed.
 
-- You can customize the Arduino and Python code to adjust the update intervals, display layout, or other features according to your needs.
+## Contributing 🤝
 
-Now, you have a CPU and RAM usage monitor using an Arduino and Python! :tada:
+Contributions are welcome! Feel free to open issues or pull requests for improvements or bug fixes.
+
+## License 📜
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Note**: You need to import the `Adafruit_SSD1306` library because it's designed for OLED displays. Additionally, make sure your Arduino board is connected to your PC via a USB cable.
